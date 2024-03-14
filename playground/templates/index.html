@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        .square {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            margin: 10px
+        }
+    </style>
+</head>
+
+<body style="padding: 50px;">
+    <h1 style="text-align:center;">Welcome!</h1>
+    <div class="container" style="display: flex; align-items: center; justify-content: center;">
+        {% for i in range(num) %}
+        <span class="square" style="background-color: {{ color }};"></span>
+        {% endfor %}
+
+    </div>
+</body>
+
+</html>

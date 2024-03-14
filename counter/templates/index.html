@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="body">
+    <div class="container">
+        <h1 id="title">COUNTER!</h1>
+        <p id="counter">{{ counter }}</p>
+        <button id="up" onclick="incrementCounter()">UP</button>
+        <form id="reset_form" action="{{ url_for('destroy_session') }}" method="post">
+            <button id="reset">RESET</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
